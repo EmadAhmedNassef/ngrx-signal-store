@@ -10,7 +10,7 @@ export class LangBtn {
   readonly currentLocale = this.detectLocale();
 
   localList = [
-    { code: 'en-US', label: 'English', path: '/' },
+    { code: 'en-US', label: 'English', path: '/en-US/' },
     { code: 'ar', label: 'العربية', path: '/ar/' },
   ];
 
