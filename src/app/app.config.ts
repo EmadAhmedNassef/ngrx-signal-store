@@ -4,6 +4,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideToastr } from 'ngx-toastr';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +17,7 @@ export const appConfig: ApplicationConfig = {
       progressBar: true,
     }),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideAnimations(),
   ],
 };
 

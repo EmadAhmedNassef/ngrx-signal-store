@@ -11,10 +11,11 @@
   "private": true,
   "packageManager": "npm@11.6.0",
   "dependencies": {
-    "@angular/fire": "^20.0.1",
+    "@angular/animations": "^20.3.24",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
+    "@angular/fire": "^20.0.1",
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
