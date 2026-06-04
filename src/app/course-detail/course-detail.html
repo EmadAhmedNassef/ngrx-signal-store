@@ -1,0 +1,47 @@
+<div class="p-8">
+  <div class="max-w-xl mx-auto">
+    <a routerLink="/courses" class="text-sm text-blue-600 hover:text-blue-800"
+      >&larr; Back to Courses</a
+    >
+
+    @if (course(); as course) {
+      <article
+        class="mt-6 border border-gray-200 bg-white font-sans shadow-sm overflow-hidden rounded-lg"
+      >
+        <header class="px-5 py-4 bg-white flex items-center justify-between">
+          <h1 class="text-xl font-bold text-gray-900">{{ course.title }}</h1>
+          <span class="text-sm font-medium text-gray-500">ID: {{ course.id }}</span>
+        </header>
+
+        <section>
+          <img [src]="'/' + course.image" [alt]="course.title" class="w-full h-56 object-cover" />
+        </section>
+
+        <section class="bg-gray-100 px-5 py-4 space-y-4">
+          <div>
+            <h2 class="text-sm font-bold text-gray-900 mb-1">Author</h2>
+            <p class="text-sm text-gray-700">{{ course.author }}</p>
+          </div>
+
+          <div>
+            <h2 class="text-sm font-bold text-gray-900 mb-1">Description</h2>
+            <p class="text-sm text-gray-700 leading-relaxed">{{ course.description }}</p>
+          </div>
+
+          <p class="text-lg font-bold text-gray-900">${{ course.price }}</p>
+        </section>
+
+        <footer class="bg-gray-100 px-5 py-4 border-t border-gray-200">
+          <a
+            [routerLink]="['/courses', course.id, 'edit']"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+          >
+            Edit Course
+          </a>
+        </footer>
+      </article>
+    } @else {
+      <p class="mt-6 text-gray-500">Course not found.</p>
+    }
+  </div>
+</div>

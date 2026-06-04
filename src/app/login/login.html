@@ -1,0 +1,45 @@
+<div class="max-w-md mx-auto p-8">
+  <div class="form-container">
+    <h1 class="text-2xl font-bold text-gray-900 text-center mb-2">Sign in</h1>
+    <p class="text-sm text-gray-500 text-center mb-6">Welcome back to NgRx App</p>
+
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+          formControlName="email"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          autocomplete="current-password"
+          placeholder="••••••••"
+          formControlName="password"
+        />
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-button">Sign in</button>
+      </div>
+    </form>
+
+    <p class="text-center text-sm text-gray-500 mt-6">
+      Don't have an account?
+      <a routerLink="/signup" class="text-blue-600 hover:text-blue-800 font-medium">Sign up</a>
+    </p>
+
+    <p class="text-center text-sm text-gray-500 mt-2">
+      <a routerLink="/courses" class="text-blue-600 hover:text-blue-800"
+        >Continue without signing in</a
+      >
+    </p>
+  </div>
+</div>

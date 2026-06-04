@@ -1,0 +1,70 @@
+<header class="bg-gray-900 text-white shadow-md">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a
+      routerLink="/"
+      class="text-lg font-bold tracking-tight hover:text-gray-200 transition-colors"
+    >
+      NgRx App
+    </a>
+
+    <ul class="flex items-center gap-1">
+      <li>
+        @if (user()) {
+          <div>
+            <span class="text-sm font-medium text-gray-200">{{ user()?.email }}</span>
+            <a
+              (click)="logout()"
+              routerLinkActive="bg-gray-700"
+              class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
+              Logout
+            </a>
+          </div>
+        } @else {
+          <a
+            routerLink="/login"
+            routerLinkActive="bg-gray-700"
+            class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+          >
+            Login
+          </a>
+          <a
+            routerLink="/signup"
+            routerLinkActive="bg-gray-700"
+            class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+          >
+            Sign up
+          </a>
+        }
+      </li>
+      <li>
+        <a
+          routerLink="/categories"
+          routerLinkActive="bg-gray-700"
+          class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          Categories
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/courses"
+          routerLinkActive="bg-gray-700"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          Courses
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/counter"
+          routerLinkActive="bg-gray-700"
+          class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          Counter
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,57 @@
+<div class="p-8">
+  <div class="max-w-6xl mx-auto mb-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold text-gray-900">Categories</h1>
+      @if (results()) {
+        <p class="text-sm text-gray-500 mt-1">{{ results() }} categories found</p>
+      }
+    </div>
+    <button
+      type="button"
+      (click)="refresh()"
+      class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+    >
+      Refresh
+    </button>
+  </div>
+
+  @if (loading()) {
+    <p class="text-center text-gray-500 py-12">Loading categories...</p>
+  } @else if (error()) {
+    <p class="text-center text-red-600 py-12">{{ error() }}</p>
+  } @else {
+    <div class="max-w-6xl mx-auto flex flex-wrap gap-6 justify-center">
+      @for (category of categories(); track category._id) {
+        <article
+          class="max-w-sm w-full border border-gray-200 bg-white font-sans shadow-sm overflow-hidden rounded-lg"
+        >
+          <header class="px-5 py-4 bg-white">
+            <h2 class="text-base font-bold text-gray-900 leading-snug">{{ category.title }}</h2>
+            <p class="text-xs text-gray-500 mt-1">{{ category.slug }}</p>
+          </header>
+
+          <section>
+            <img
+              [src]="category.image"
+              [alt]="category.title"
+              class="w-full h-40 object-cover"
+            />
+          </section>
+
+          <section class="bg-gray-100 px-5 py-4">
+            <h3 class="text-sm font-bold text-gray-900 mb-2">Description</h3>
+            <p class="text-sm text-gray-700 leading-relaxed line-clamp-3">
+              {{ category.description }}
+            </p>
+          </section>
+
+          <footer class="bg-gray-100 px-5 py-4 border-t border-gray-200 text-xs text-gray-500">
+            <p>Updated: {{ category.updatedAt | date: 'mediumDate' }}</p>
+          </footer>
+        </article>
+      } @empty {
+        <p class="text-gray-500 text-center w-full py-12">No categories found.</p>
+      }
+    </div>
+  }
+</div>
