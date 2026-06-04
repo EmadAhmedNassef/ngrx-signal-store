@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1608535958865877951" datatype="html">
+        <source> NgRx App </source>
+        <target> التطبيق </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1908285951500318953" datatype="html">
+        <source> Login </source>
+        <target> تسجيل الدخول </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7203320122205058413" datatype="html">
+        <source> Sign up </source>
+        <target> تسجيل الإنضمام </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7615200044380578202" datatype="html">
+        <source> Categories </source>
+        <target> الفئات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3724959576928690439" datatype="html">
+        <source> Courses </source>
+        <target> الدورات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6802309643667626221" datatype="html">
+        <source> Counter </source>
+        <target> العداد </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

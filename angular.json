@@ -8,6 +8,14 @@
   "projects": {
     "ngrx-counter": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ar": {
+            "translation": "public/localization/messages.ar.xlf"
+          }
+        }
+      },
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
@@ -17,7 +25,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -29,7 +37,12 @@
             "styles": ["src/styles.css"]
           },
           "configurations": {
+            "ar": {
+              "localize": ["ar"]
+            },
             "production": {
+              "localize": true,
+              "i18nMissingTranslation": "ignore",
               "budgets": [
                 {
                   "type": "initial",
@@ -60,6 +73,9 @@
             },
             "development": {
               "buildTarget": "ngrx-counter:build:development"
+            },
+            "ar": {
+              "buildTarget": "ngrx-counter:build:development,ar"
             }
           },
           "defaultConfiguration": "development"

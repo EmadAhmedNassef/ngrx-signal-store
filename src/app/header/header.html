@@ -1,6 +1,7 @@
 <header class="bg-gray-900 text-white shadow-md">
   <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <a
+      i18n
       routerLink="/"
       class="text-lg font-bold tracking-tight hover:text-gray-200 transition-colors"
     >
@@ -22,6 +23,7 @@
           </div>
         } @else {
           <a
+            i18n
             routerLink="/login"
             routerLinkActive="bg-gray-700"
             class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
@@ -29,6 +31,7 @@
             Login
           </a>
           <a
+            i18n
             routerLink="/signup"
             routerLinkActive="bg-gray-700"
             class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
@@ -39,6 +42,7 @@
       </li>
       <li>
         <a
+          i18n
           routerLink="/categories"
           routerLinkActive="bg-gray-700"
           class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
@@ -48,6 +52,7 @@
       </li>
       <li>
         <a
+          i18n
           routerLink="/courses"
           routerLinkActive="bg-gray-700"
           [routerLinkActiveOptions]="{ exact: true }"
@@ -58,12 +63,16 @@
       </li>
       <li>
         <a
+          i18n
           routerLink="/counter"
           routerLinkActive="bg-gray-700"
           class="px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors"
         >
           Counter
         </a>
+      </li>
+      <li>
+        <app-lang-btn />
       </li>
     </ul>
   </nav>

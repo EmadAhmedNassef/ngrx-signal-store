@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthStore } from '../../store/auth/auth.store';
+import { LangBtn } from '../lang-btn/lang-btn';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, LangBtn],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
